@@ -5,13 +5,23 @@ import CartDrawer from './CartDrawer';
 
 const Layout = ({ children }) => {
     return (
-        <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+        <div className="app-container">
+            <div style={{
+                backgroundColor: '#FFA500',
+                color: 'white',
+                textAlign: 'center',
+                padding: '8px',
+                fontWeight: 'bold',
+                fontSize: '0.9rem'
+            }}>
+                🚧 STORE IN PREVIEW MODE - ORDERS ARE FOR TESTING ONLY 🚧
+            </div>
             <Navbar />
-            <CartDrawer />
-            <main style={{ flex: 1 }}>
+            <main className="main-content">
                 {children}
             </main>
             <Footer />
+            <CartDrawer />
         </div>
     );
 };

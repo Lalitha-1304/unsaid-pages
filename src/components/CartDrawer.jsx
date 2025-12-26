@@ -44,7 +44,7 @@ const CartDrawer = () => {
                                 <img src={item.image} alt={item.name} className="cart-item-img" />
                                 <div className="cart-item-details">
                                     <h4>{item.name}</h4>
-                                    <p className="cart-item-price">${item.price}</p>
+                                    <p className="cart-item-price">₹{item.price}</p>
                                     <div className="cart-item-controls">
                                         <button onClick={() => updateQuantity(item.id, -1)} aria-label="Decrease quantity">
                                             <Minus size={16} />
@@ -71,7 +71,7 @@ const CartDrawer = () => {
                     <div className="cart-footer">
                         <div className="cart-total">
                             <span>Total</span>
-                            <span>${cartTotal.toFixed(2)}</span>
+                            <span>₹{cartTotal.toFixed(2)}</span>
                         </div>
                         <button
                             className="btn btn-primary checkout-btn"

@@ -140,13 +140,13 @@ Please confirm my order. ${formData.paymentMethod === 'ONLINE' ? 'Please share t
                         {cartItems.map(item => (
                             <div key={item.id} className="summary-item">
                                 <span>{item.name} x {item.quantity}</span>
-                                <span>${(item.price * item.quantity).toFixed(2)}</span>
+                                <span>₹{(item.price * item.quantity).toFixed(2)}</span>
                             </div>
                         ))}
                     </div>
                     <div className="summary-total">
                         <span>Total</span>
-                        <span>${cartTotal.toFixed(2)}</span>
+                        <span>₹{cartTotal.toFixed(2)}</span>
                     </div>
                 </div>
             </div>
